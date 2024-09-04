@@ -1,0 +1,16 @@
+.header {
+  transition: all 0.5sec;
+  z-index: 997;
+  height: 60px;
+  box-shadow: 0px 2px 20px rgba(1, 41, 113, 0.1);
+  background-color: #fff;
+  padding-left: 20px;
+}
+/*search bar*/
+/*Toggle sidebar button*/
+.header.toggle-toggle-sidebar-btn {
+  font-size: 32px;
+  padding-left: 10px;
+  cursor: pointer;
+  color: #012970;
+}

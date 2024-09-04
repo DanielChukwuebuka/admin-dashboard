@@ -1,0 +1,27 @@
+.dashboard .activity {
+  font-size: 14px;
+}
+
+.dashboard .activity .activity-item .activite-label {
+  color: #888;
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 0;
+  min-width: 64px;
+}
+.dashboard .activity .activity-item.activity-badge {
+  margin-top: 3px;
+  z-index: 1;
+  font-size: -11px;
+  line-height: 0;
+  bottom: 0;
+  background-color: #eceefe;
+  flex-grow: ;
+}
+
+.dashboard .activity .activity-item:first-child .actvite-label::before {
+  top: 5px;
+}
+.dashboard .activity .activity-item:last-child .activity-content {
+  padding-bottom: 0;
+}
