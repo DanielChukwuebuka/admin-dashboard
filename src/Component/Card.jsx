@@ -72,18 +72,36 @@ function Card({ card }) {
               <i className={cardIconClass}></i>
             </div>
             <div className="ps-3">
-              <h6>{cardAmount}</h6>
+              <h6
+                style={{
+                  fontSize: "40px",
+                  color: "#012970",
+                  fontWeight: "700",
+                  margin: "0",
+                  padding: "0",
+                  marginTop: "25px",
+                }}
+              >
+                {cardAmount}
+              </h6>
               <span
                 style={{
                   ...percentageClass,
-                  fontSize: "small",
+                  fontSize: "13px",
                   paddingTop: "1px",
                   fontWeight: "bold",
                 }}
               >
                 {percentageText}
               </span>
-              <span className="text-muted small pt-2 ps-1">
+              <span
+                style={{
+                  ...percentageClass,
+                  fontSize: "13px",
+                  paddingTop: "1px",
+                  fontWeight: "bold",
+                }}
+              >
                 {percentageChangeText}%
               </span>
             </div>
