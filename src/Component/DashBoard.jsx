@@ -9,23 +9,43 @@ import BudgetReport from "./BudgetReport";
 import WebTraffic from "./WebTraffic";
 import News from "./News";
 
+// Mock data directly within the component
+const mockData = {
+  cards: [
+    {
+      _id: 1,
+      name: "Sales",
+      icon: "bi bi-cart",
+      amount: 145,
+      percentage: 0.12,
+      active: true,
+    },
+    {
+      _id: 2,
+      name: "Revenue",
+      icon: "bi bi-currency-dollar",
+      amount: 3246,
+      percentage: 0.08,
+      active: false,
+    },
+    {
+      _id: 3,
+      name: "Customers",
+      icon: "bi bi-people",
+      amount: 1244,
+      percentage: -0.11,
+      active: false,
+    },
+  ],
+};
+
 function DashBoard() {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    // Instead of fetching, we use the mock data directly
+    setCards(mockData.cards);
   }, []);
-
-  function fetchData() {
-    fetch("http://localhost:3000/cards")
-      .then((res) => res.json())
-      .then((data) => {
-        setCards(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }
 
   return (
     <section className="Dashboard section">

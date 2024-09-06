@@ -7,7 +7,7 @@ function TopSellingItem({ item }) {
         <a href="#">
           <img
             src={item.preview}
-            alt=""
+            alt={item.name}
             style={{
               borderRadius: "5px",
               maxWidth: "60px",
@@ -31,7 +31,7 @@ function TopSellingItem({ item }) {
       </td>
       <td>${item.price.toFixed(2)}</td>
       <td style={{ fontWeight: "bold" }}>{item.sold}</td>
-      <td>${(item.price + item.sold).toLocaleString("en-US")}</td>
+      <td>${(item.price * item.sold).toLocaleString("en-US")}</td>
     </tr>
   );
 }
